@@ -15,6 +15,7 @@ import java.io.PrintWriter;
 @Component
 public class CommonResultHandler extends ApiHandler{
 
+    @Override
     protected void handlerResult(Object obj, HttpServletResponse resp) throws IOException {
         String valOut;
         if (obj instanceof String){

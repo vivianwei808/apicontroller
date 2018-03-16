@@ -40,7 +40,7 @@ public abstract class ApiHandler implements ApplicationContextAware{
         Object controllerCls = ctx.getBean(apiRunnable.getControllerClass());
         Method method = apiRunnable.getMethod();
         try {
-            //TODO 方法上加上参数 参见 InterfaceExecutorServiceImpl 接口平台
+            //TODO 方法上加上参数 ---动态代理 实现方法参数值的传递
             Object obj = method.invoke(controllerCls);
             try {
                 handlerResult(obj,resp);

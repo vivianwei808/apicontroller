@@ -34,6 +34,7 @@ public class ApiRegister implements InitializingBean, ApplicationContextAware {
      *
      * @throws Exception
      */
+    @Override
     public void afterPropertiesSet() throws Exception {
         initHandlerMapping();
     }

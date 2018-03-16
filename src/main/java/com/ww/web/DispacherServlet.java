@@ -29,6 +29,7 @@ public class DispacherServlet extends HttpServlet {
         apiHandler = applicationContext.getBean(CommonResultHandler.class);
     }
 
+    @Override
     public void service(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         apiHandler.handle(req,resp);
     }
